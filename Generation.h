@@ -1,19 +1,33 @@
 #pragma once
 
-#include <memory>
+#include <vector>
 
 namespace GoL
 {
    class Generation
    {
    public:
-      virtual ~Generation() = default;
+      Generation();
+      Generation(int rows, int columns, const std::vector<bool> &cells);
 
-      virtual int rows() const = 0;
-      virtual int columns() const = 0;
-      virtual bool isCellAlive(int row, int col) const = 0;
-      virtual bool equals(const std::shared_ptr<Generation> &rhs);
+      bool operator==(const Generation &rhs) const;
 
-      virtual std::shared_ptr<Generation> evolved() const = 0;
+      int rows() const;
+      int columns() const;
+      bool cell(int row, int col) const;
+      void setCell(int row, int col, bool active);
+
+      bool isValidCell(int row, int col) const;
+
+      Generation cloneEmpty() const;
+
+   protected:
+      int m_rows;
+      int m_columns;
+      std::vector<bool> m_cells;
+
+      int cellIndex(int row, int col) const;
    };
 }
+
+

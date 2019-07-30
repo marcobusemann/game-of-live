@@ -151,19 +151,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BoundlessGeneration.cpp" />
+    <ClCompile Include="BoundedEvolution.cpp" />
+    <ClCompile Include="BoundlessEvolution.cpp" />
+    <ClCompile Include="FileGeneration.cpp" />
     <ClCompile Include="GameOfLive.cpp" />
-    <ClCompile Include="LinearCells.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Generation.cpp" />
-    <ClCompile Include="SimpleGeneration.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="RandomGeneration.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BoundlessGeneration.h" />
+    <ClInclude Include="BoundedEvolution.h" />
+    <ClInclude Include="BoundlessEvolution.h" />
+    <ClInclude Include="Evolution.h" />
+    <ClInclude Include="FileGeneration.h" />
     <ClInclude Include="GameOfLive.h" />
     <ClInclude Include="Generation.h" />
-    <ClInclude Include="LinearCells.h" />
-    <ClInclude Include="SimpleGeneration.h" />
+    <ClInclude Include="RandomGeneration.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
